@@ -1,0 +1,18 @@
+extends index.pug 
+
+
+
+block content
+    
+    div.content
+        h4.title='Add Category'
+
+        form(method='POST' action='/category/addcategory')
+            label(for='category')='Category Name'
+            input.input(type='text' name='category')
+            input(type='submit' value='Submit')
+
+        
+
+        
+

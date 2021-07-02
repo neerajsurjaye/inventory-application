@@ -1,10 +1,10 @@
 let express = require('express')
 let route = express.Router()
 
+let home = require('../controller/homeController')
 
-route.get('/', (req, res) => {
-    res.render('home', { title: "header" })
-})
+
+route.get('/', home.getHomePage)
 
 
 

@@ -2,4 +2,15 @@ extends index.pug
 
 block content
     //navbar
-    p='Page Data'
+    div.content
+        h4.title='Components'
+
+        if components
+            ul
+                for val in components
+                    li=val
+
+        else
+            h3='No Categories'
+
+        a(href='/category/addcategory')='add Category'
