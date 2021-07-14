@@ -9,8 +9,9 @@ app.use(express.urlencoded({ extended: true }))
 //category Route
 let indexRoute = require('./routes/indexRoute')
 let categoryRoute = require('./routes/categoryRoute')
+let productsRoute = require('./routes/productsRoute')
 
-//view engines
+// view engines
 app.set('view engine', 'pug')
 app.set('views', 'views');
 
@@ -25,5 +26,6 @@ app.use(express.static('public'))
 
 app.use('/', indexRoute)
 app.use('/category', categoryRoute)
+app.use('/products', productsRoute)
 
 app.listen(3000)

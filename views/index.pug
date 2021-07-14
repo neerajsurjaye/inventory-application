@@ -7,11 +7,17 @@ html
     body
         div.navbar
             h2.navlogo='Computer Parts'
-            h5.navbtn='Home'
-            h5.navbtn='About'
+
+            a(href='/').url.navbtn
+                 h5='Home'
+            
+            a(href='/About').url.navbtn
+                 h5='About'
         
         div.container
             block content 
 
         div.footer
             p='Footer content'
+
+    script(src='/scripts/index.js')

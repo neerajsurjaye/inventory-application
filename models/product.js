@@ -6,7 +6,7 @@ let product = new Schema({
     manufacturer: { type: String, required: true },
     stock: { type: Number, min: 0 },
     price: { type: Number, min: 0 },
-    cateogary: { type: mongoose.Schema.Types.ObjectId, ref: 'category' }
+    category: { type: mongoose.Schema.Types.ObjectId, ref: 'category' }
 })
 
 

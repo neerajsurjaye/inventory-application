@@ -1,0 +1,28 @@
+extends index.pug 
+
+
+
+block content
+    
+    div.content
+        h4.title='Add Category'
+
+        form(method='POST' action=`/products/addproducts/${id}`)
+            div
+                label(for='category')='Product Name'
+                input.input(type='text' name='name')
+            div
+                label(for='category')='Manufacturer Name'
+                input.input(type='text' name='manufacturer')
+            div
+                label(for='category')='Stock'
+                input.input(type='number' name='stock')
+            div
+                label(for='category')='Price'
+                input.input(type='text' name='price')
+            input(type='submit' value='Submit')
+
+        
+
+        
+
