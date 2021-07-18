@@ -178,6 +178,7 @@ input{
 .name{
     font-size: 1.8rem;
     font-weight: 600;
+    overflow: hidden;
 }
 
 .manufacturer{
@@ -218,30 +219,55 @@ input{
 }
 
 .inpName{
-    /* width: fit-content; */
     display: inline-block;
     padding: 10px;
     background-color: var(--primary);
     color: white;
-    margin-right: 10px;
 }
 
 .inpCont{
-    display: flex;
+    display: inline-flex;
     border: solid 2px var(--primary);
     border-radius: 8px;
     overflow: hidden;
-    display: inline-block;
+    
     margin: 10px;
 }
 
 .inpCont > input {
     height: 100%;
     background-color: rgba(0, 0,0,0);
-
+    width: 100%;
     font-size: 1rem;
 }
 
 .full-width{
     width: 100%;
 }
+
+
+
+@media only screen and (max-width: 768px) {
+    .content{
+        width: 100%;
+   
+    }
+    .navbar{
+        font-size: 1rem;
+    }
+    .inpCont{
+        align-items: center;
+        margin: 10px 0px;
+        width: 100%;
+    }
+    .inpName{
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .inpCont>input{
+        width: 60%;
+        padding-left: 10px;
+    }
+  }
