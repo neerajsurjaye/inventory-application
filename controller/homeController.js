@@ -11,3 +11,16 @@ exports.getHomePage = async (req, res) => {
 
     res.render('home', { components: data })
 }
+
+
+exports.getLoginPage = (req, res) => {
+    res.render('login')
+}
+
+exports.loginPost = (req, res) => {
+    if (req.body.password == "Pass1234") {
+        res.render('message', { message: "Logged in" })
+    } else {
+        res.render('message', { message: "Wrong Password" })
+    }
+}

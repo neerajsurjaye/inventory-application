@@ -9,11 +9,12 @@ block content
             ul.home-list
                 for val in products
                     li.list-item
-                        div
+                        a(href=`/products/${val._id}`).url
                             p='Name : ' + val.name
                             p='manufacturer : ' + val.manufacturer
                             p='Stock : ' + val.stock
                             p='Price : ' + val.price
+                        a(href=`/products/delete/${val._id}`).to-right="Delete"
         else
             h4='No Products'
 

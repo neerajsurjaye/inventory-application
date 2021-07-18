@@ -15,17 +15,22 @@ body{
     background-color: #efefef;
 }
 
+input{
+    border: 1px solid #888;
+    border-radius: 4px;
+}
+
 
 .url, .url:hover, .url:focus, .url:active {
     text-decoration: none;
     color: inherit;
-    display: flex;
+    /* display: flex; */
 }
 
 /* navbar */
 .navbar{
     width: 100%;
-    height: 50px;
+    height: 64px;
     box-shadow: 0 0 10px #aaa;
     z-index: 2;
     background-color: #fff;
@@ -34,6 +39,7 @@ body{
 
     display: flex;
     align-items: center;
+    font-size: 1.2rem;
 }
 
 .navbtn{
@@ -94,6 +100,7 @@ body{
     min-height: 50px;
     margin: 10px 0;
     cursor: pointer;
+    display: flex;
 
     background-color: #fff;
     transition: 0.1s all;
@@ -113,4 +120,18 @@ body{
     align-items: center;
     font-size: 1.2rem;
     color: #333;
+}
+
+.to-right{
+    margin-left: auto;
+}
+
+
+/* inputs */
+.inpName{
+    width: fit-content;
+}
+
+.inpCont{
+    display: flex;
 }

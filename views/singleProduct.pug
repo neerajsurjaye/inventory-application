@@ -1,0 +1,29 @@
+extends index.pug 
+
+block content
+    //navbar
+    div.content
+        h4.title='Category : ' + catName
+
+        if product
+            form(method="POST" action='')
+                div.inpCont    
+                    div.inpName='Name : '
+                    input(name="name" value=product.name)
+                div.inpCont    
+                    div.inpName='Manufacturer : '
+                    input(name="manufacturer" value=product.manufacturer)
+                div.inpCont    
+                    div.inpName='Stock : '
+                    input(name="stock" value=product.stock type='number')
+                div.inpCont    
+                    div.inpName='Price : '
+                    input(name="price" value=product.price type='number')
+                input(name="url" value=url type='hidden')
+
+                button(type='submit').navbtn="SUBMIT"
+        else
+            h4='No Products'
+
+        
+    
