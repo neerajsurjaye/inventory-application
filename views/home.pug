@@ -10,8 +10,9 @@ block content
                 for val in components
                     li.list-item
                         a(href=`/category/${val.id}`).list-item-url.url=val.name
-                        a(href=`/category/delete/${val.id}`).to-right="Delete"
+                        a(href=`/category/delete/${val.id}`).to-right.url.delete-btn="Delete"
         else
             h3='No Categories'
-
-        a(href='/category/addcategory')='add Category'
+        
+        div.btncont
+            a(href='/category/addcategory').url.btn='add Category'

@@ -3,10 +3,10 @@ extends index.pug
 block content
     //navbar
     div.content
-        h4.title='Category : ' + catName
+        h4.title='Update Product : '
 
         if product
-            form(method="POST" action='')
+            form(method="POST" action='').inpData
                 div.inpCont    
                     div.inpName='Name : '
                     input(name="name" value=product.name)
@@ -21,7 +21,7 @@ block content
                     input(name="price" value=product.price type='number')
                 input(name="url" value=url type='hidden')
 
-                button(type='submit').navbtn="SUBMIT"
+                button(type='submit').btn="SUBMIT"
         else
             h4='No Products'
 

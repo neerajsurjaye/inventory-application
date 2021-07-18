@@ -51,29 +51,30 @@ exports.singleCat = async (req, res) => {
     } else {
 
         let prod = await products.find({ category: cat._id })
+        console.log(prod);
         res.render('singleCat', { id: id, products: prod, catName: cat.name })
 
     }
 }
 
 exports.deleteCat = async (req, res) => {
-    // let id = req.params.id
-    // let cat = await category.findOne({ id: id })
-    // let cat_id = cat._id
+    let id = req.params.id
+    let cat = await category.findOne({ id: id })
+    let cat_id = cat._id
 
-    // let prod = await products.deleteMany({ category: cat_id }, (err) => {
-    //     if (err) {
-    //         console.log("Product : ", err);
-    //     }
-    // })
-    // console.log("Deleted : ", prod);
+    let prod = await products.deleteMany({ category: cat_id }, (err) => {
+        if (err) {
+            console.log("Product : ", err);
+        }
+    })
+    console.log("Deleted : ", prod);
 
-    // cat = await category.deleteOne({ id: id }, (err) => {
-    //     if (err) {
-    //         console.log("Category : ", err);
-    //     }
-    // })
-    // console.log("Deleted : cat : ", cat)
+    cat = await category.deleteOne({ id: id }, (err) => {
+        if (err) {
+            console.log("Category : ", err);
+        }
+    })
+    console.log("Deleted : cat : ", cat)
 
     res.redirect('/')
 }

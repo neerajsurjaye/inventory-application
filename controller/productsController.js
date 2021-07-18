@@ -46,6 +46,7 @@ exports.getProduct = async (req, res) => {
 
     let url
 
+
     if (prod.category) {
         url = `/category/${prod.category.id}`
     }

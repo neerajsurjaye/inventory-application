@@ -9,17 +9,19 @@ block content
             ul.home-list
                 for val in products
                     li.list-item
-                        a(href=`/products/${val._id}`).url
-                            p='Name : ' + val.name
-                            p='manufacturer : ' + val.manufacturer
-                            p='Stock : ' + val.stock
-                            p='Price : ' + val.price
-                        a(href=`/products/delete/${val._id}`).to-right="Delete"
+                        a(href=`/products/${val._id}`).list-prod.url.full-width
+                            div.list-cont
+                                p.name= val.name
+                                p.manufacturer=val.manufacturer
+                            div.list-cont.left-border
+                                p='Stock : ' + val.stock
+                                p='Price : ' + val.price
+                        a(href=`/products/delete/${val._id}`).delete-btn.url="Delete"
         else
             h4='No Products'
 
         
 
-
-        a(href=`/products/addproducts/${id}`)='Add Product'
+        div.btncont
+            a(href=`/products/addproducts/${id}`).btn.url='Add Product'
     

@@ -7,10 +7,12 @@ block content
     div.content
         h4.title='Add Category'
 
-        form(method='POST' action='/category/addcategory')
-            label(for='category')='Category Name'
-            input.input(type='text' name='category')
-            input(type='submit' value='Submit')
+        form(method='POST' action='/category/addcategory').inpData
+            div.inpCont
+                label(for='category').inpName='Category Name'
+                input.input(type='text' name='category')
+
+            input(type='submit' value='Submit').btn
 
         
 

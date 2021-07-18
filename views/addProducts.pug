@@ -7,20 +7,20 @@ block content
     div.content
         h4.title='Add Category'
 
-        form(method='POST' action=`/products/addproducts/${id}`)
-            div
-                label(for='category')='Product Name'
+        form(method='POST' action=`/products/addproducts/${id}`).inpData
+            div.inpCont
+                label(for='category').inpName='Product Name'
                 input.input(type='text' name='name')
-            div
-                label(for='category')='Manufacturer Name'
+            div.inpCont
+                label(for='category').inpName='Manufacturer Name'
                 input.input(type='text' name='manufacturer')
-            div
-                label(for='category')='Stock'
+            div.inpCont
+                label(for='category').inpName='Stock'
                 input.input(type='number' name='stock')
-            div
-                label(for='category')='Price'
+            div.inpCont
+                label(for='category').inpName='Price'
                 input.input(type='number' name='price')
-            input(type='submit' value='Submit')
+            input(type='submit' value='Submit').btn
 
         
 

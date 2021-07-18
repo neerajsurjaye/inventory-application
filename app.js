@@ -2,7 +2,7 @@ let express = require('express')
 let app = express()
 let path = require('path')
 let mongoose = require('mongoose')
-let cookie_parser = require('cookie-parser')
+let cookieParser = require('cookie-parser')
 
 //extra middlewares
 app.use(express.urlencoded({ extended: true }))
@@ -23,7 +23,7 @@ mongoose.set('useFindAndModify', false)
 
 
 // cookie parser
-app.use(cookie_parser())
+app.use(cookieParser())
 
 //static Server
 app.use(express.static('public'))
