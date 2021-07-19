@@ -35,4 +35,6 @@ app.use('/', indexRoute)
 app.use('/category', categoryRoute)
 app.use('/products', productsRoute)
 
-app.listen(3000)
+app.listen(process.env.PORT || 3000, () => {
+    console.log(`started app at ${process.env.PORT || 3000}`);
+})
