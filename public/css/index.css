@@ -11,7 +11,7 @@
 }
 
 :root{
-    --primary : #468189;
+    --primary : #051923;
     --text : #051923;
     --background : #f7f7ff;
     --backSec : #e9e9f3;
@@ -215,7 +215,6 @@ input{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
 }
 
 .inpName{
@@ -223,15 +222,18 @@ input{
     padding: 10px;
     background-color: var(--primary);
     color: white;
+    width: fit-content;
+    white-space: nowrap;
+    margin-right: 10px;
 }
 
 .inpCont{
-    display: inline-flex;
+    display: flex;
     border: solid 2px var(--primary);
     border-radius: 8px;
     overflow: hidden;
     
-    margin: 10px;
+    margin: 10px 0px;
 }
 
 .inpCont > input {
@@ -269,5 +271,9 @@ input{
     .inpCont>input{
         width: 60%;
         padding-left: 10px;
+    }
+
+    .name{
+        font-size: 1rem;
     }
   }

@@ -43,3 +43,8 @@ exports.auth = (req, res, next) => {
         res.render('message', { message: "Login to do this operation" })
     }
 }
+
+
+exports.about = (req, res) => {
+    res.render('message', { message: "Made by : Neeraj Surjaye" })
+}
