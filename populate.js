@@ -3,8 +3,11 @@ const mongoose = require('mongoose')
 let product = require('./models/product')
 let category = require('./models/category')
 
+let dotenv = require('dotenv')
+dotenv.config()
 
-let mongodb = 'mongodb://127.0.0.1:27017/inventory'
+
+let mongodb = process.env.MONGODB
 mongoose.connect(mongodb, { useNewUrlParser: true, useUnifiedTopology: true })
 
 

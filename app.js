@@ -3,6 +3,8 @@ let app = express()
 let path = require('path')
 let mongoose = require('mongoose')
 let cookieParser = require('cookie-parser')
+let dotenv = require('dotenv')
+dotenv.config()
 
 //extra middlewares
 app.use(express.urlencoded({ extended: true }))
@@ -16,8 +18,9 @@ let productsRoute = require('./routes/productsRoute')
 app.set('view engine', 'pug')
 app.set('views', 'views');
 
+// console.log(process.env.MONGODB);
 //db setup
-let mongodb = 'mongodb://127.0.0.1:27017/inventory'
+let mongodb = process.env.MONGODB
 mongoose.connect(mongodb, { useNewUrlParser: true, useUnifiedTopology: true })
 mongoose.set('useFindAndModify', false)
 
